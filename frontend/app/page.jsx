@@ -1,17 +1,18 @@
-import Footer from "@/components/footer/Footer";
-import Features from "@/components/home/Features";
-import MainSection from "@/components/home/MainSection";
-import SubscribeForm from "@/components/home/SubscribeForm";
-import Header from "@/components/navbar/Navbar";
+import React from 'react';
+import Navbar from '@/components/navbar/Navbar';
+import MainSection from '@/components/home/MainSection';
+import Footer from '@/components/footer/Footer';
 
-export default function Home() {
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-1">
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-grow">
         <MainSection />
-        <Features />
-        <SubscribeForm />
+        {/* <FeaturesSection />
+        <TestimonialSection /> */}
+        {/* <CTASection /> */}
       </main>
       <Footer />
     </div>

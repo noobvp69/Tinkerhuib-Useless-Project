@@ -1,5 +1,6 @@
 // components/MainSection.js
 import { Button } from "@/components/ui/button";
+import { Link } from "lucide-react";
 
 export default function MainSection() {
   return (
@@ -8,13 +9,20 @@ export default function MainSection() {
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-              Welcome to MyWebsite
+              PROJECT POINTLESS
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
               Discover amazing products and services tailored just for you.
             </p>
           </div>
           <div className="space-x-4">
+            <a href="/soundboard">
+              <Button variant="outline">Sound Board</Button>
+            </a>
+
+            <a to="/soundboard">
+              <Button variant="outline">Learn More</Button>
+            </a>
             <Button>Get Started</Button>
             <Button variant="outline">Learn More</Button>
           </div>
