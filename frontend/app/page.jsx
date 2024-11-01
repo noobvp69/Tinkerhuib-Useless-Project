@@ -14,7 +14,8 @@ export default function HomePage() {
         <TestimonialSection /> */}
         {/* <CTASection /> */}
       </main>
-      {/* <Footer /> */}
+      
+      <Footer />
     </div>
   );
 }
