@@ -1,15 +1,78 @@
+"use client";
+
 // components/MainSection.js
 import { Button } from "@/components/ui/button";
 import { Sparkles, Music, XCircle, Sun, Brain, Newspaper, Quote, Rocket, Info } from "lucide-react";
 import Image from "next/image";
+import { motion, AnimatePresence } from 'framer-motion';
+import confetti from 'canvas-confetti';
+import { useState } from "react";
 
 export default function MainSection() {
+
+  const [message, setMessage] = useState("Welcome! Don't press the button!");
+  const [pressCount, setPressCount] = useState(0);
+  const [buttonColor, setButtonColor] = useState('#0070f3');
+  const [backgroundColor, setBackgroundColor] = useState('#f0f0f0');
+  const [buttonSize, setButtonSize] = useState(1);
+  const [isShaking, setIsShaking] = useState(false);
+  const [floatingEmojis, setFloatingEmojis] = useState([]);
+
+  const handleClick = () => {
+    // Trigger confetti
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+
+    // Random message
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    setMessage(randomMessage.text);
+    
+    // Add floating emoji
+    addFloatingEmoji(randomMessage.emoji);
+
+    // Update counts and colors
+    setPressCount(pressCount + 1);
+    setButtonColor(`hsl(${Math.random() * 360}, 80%, 60%)`);
+    setBackgroundColor(`hsl(${Math.random() * 360}, 70%, 95%)`);
+
+    // Button animations
+    setButtonSize(0.9);
+    setTimeout(() => setButtonSize(1), 100);
+    
+    // Shake effect
+    setIsShaking(true);
+    setTimeout(() => setIsShaking(false), 500);
+  };
+
+  
   return (
     <section className="min-h-screen w-full py-6 md:py-12 lg:py-16 xl:py-20 bg-gradient-to-b from-purple-100 to-pink-100 dark:from-purple-900 dark:to-pink-900">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center space-y-8 text-center">
           {/* Fun Header Section */}
-          <div className="animate-bounce">
+          {/* <div className="animate-bounce">
+            <Image
+              src="https://media.tenor.com/01-nfVtwVAgAAAAi/joy-bunny.gif" // Add a fun party popper gif
+              alt="Party Popper"
+              width={350}
+              height={350}
+            />
+          </div> */}
+            <motion.button
+        className="text-3xl p-8 rounded-full cursor-pointer text-white shadow-lg hover:shadow-xl transform transition-all duration-200 ease-in-out"
+        style={{ backgroundColor: buttonColor }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        animate={{
+          scale: buttonSize,
+          rotate: isShaking ? [-5, 5, -5, 5, 0] : 0,
+        }}
+        onClick={handleClick}
+      >
+        <div className="animate-bounce">
             <Image
               src="https://media.tenor.com/01-nfVtwVAgAAAAi/joy-bunny.gif" // Add a fun party popper gif
               alt="Party Popper"
@@ -17,10 +80,12 @@ export default function MainSection() {
               height={350}
             />
           </div>
-          
+
+      </motion.button>
+
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 animate-pulse">
-              🎮 PROJECT POINTLESS 🎮
+              🎮 PRoJEcT CHill CHaSM 🎮
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl dark:text-gray-300 font-semibold">
               Welcome to the most entertaining waste of time on the internet! 🎉
@@ -73,7 +138,7 @@ export default function MainSection() {
           </div>
 
           {/* Action Buttons */}
-          <div className="space-x-4 mt-8">
+          {/* <div className="space-x-4 mt-8">
             <Button 
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-full transform hover:scale-105 transition-all"
             >
@@ -88,7 +153,7 @@ export default function MainSection() {
               <Info className="w-5 h-5 mr-2" />
               Learn More
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
       

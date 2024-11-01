@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
+import Image from "next/image";
+
 
 export default function Home() {
   const [message, setMessage] = useState("Welcome! Don't press the button!");
@@ -121,6 +123,15 @@ export default function Home() {
         onClick={handleClick}
       >
         Press Me
+        <div className="animate-bounce">
+            <Image
+              src="https://media.tenor.com/01-nfVtwVAgAAAAi/joy-bunny.gif" // Add a fun party popper gif
+              alt="Party Popper"
+              width={350}
+              height={350}
+            />
+          </div>
+
       </motion.button>
 
       <motion.p

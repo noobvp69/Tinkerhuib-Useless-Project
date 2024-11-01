@@ -93,3 +93,43 @@ body {
     -webkit-text-fill-color: transparent;
   }
 }
+
+.radial-gradient {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 30%,
+    transparent 70%
+  );
+}
+
+@keyframes shimmer {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.3); }
+  100% { filter: brightness(1); }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Moon glow animation */
+@keyframes glow {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.moon-glow {
+  animation: glow 4s infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
