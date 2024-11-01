@@ -4,12 +4,7 @@ import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const sounds = [
-  '/sounds/dramatic_drums.mp3',
-  '/sounds/thunder_clap.mp3',
-  '/sounds/gong.mp3',
-  '/sounds/evil_laugh.mp3',
-  '/sounds/autat.mp3'
-];
+'https://voca.ro/1bPI4wPGNsvz'];
 
 export default function Home() {
   const [soundDisplay, setSoundDisplay] = useState('Press any key to trigger a dramatic sound!');

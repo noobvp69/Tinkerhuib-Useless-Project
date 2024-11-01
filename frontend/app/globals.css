@@ -70,3 +70,26 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* globals.css */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+.animate-float {
+  animation: float 15s ease-in-out infinite;
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

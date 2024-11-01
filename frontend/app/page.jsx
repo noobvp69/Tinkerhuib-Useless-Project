@@ -7,14 +7,14 @@ import Footer from '@/components/footer/Footer';
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="flex-grow">
         <MainSection />
         {/* <FeaturesSection />
         <TestimonialSection /> */}
         {/* <CTASection /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
