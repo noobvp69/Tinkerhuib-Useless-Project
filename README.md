@@ -6,8 +6,8 @@
 ### Team Name: Lazarus
 
 ### Team Members
-- Team Lead: Govind Hans - St. Joseph's College Devagiri
-- Member 2: Ayush vp - St. Joseph's College Devagiri
+- Team Lead: Govind Hans (https://github.com/govindhansv) - St. Joseph's College Devagiri
+- Member 2: Ayush vp - (https://github.com/noobvp69) St. Joseph's College Devagiri
 
 ### Project Description
 **"Project Chill Chasm is your ultimate escape from productivity!** 
