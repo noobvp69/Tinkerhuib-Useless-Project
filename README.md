@@ -52,6 +52,8 @@ In this feature, there are 3 buttons that show what might be your destiny?!
 In this feature, when you type something in the box, it will do wonders!
 
 ### Project Demo
+# Live Link
+(https://chill-chasm-lazarus.netlify.app/)
 # Video
 [![TinkerHub - Useless Project](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/g8cXMSZS9QY)
 We are demonstrating our web app, which has an amazing homepage containing 5 features displayed with elements of surprise!!
