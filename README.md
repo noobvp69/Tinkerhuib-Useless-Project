@@ -32,6 +32,13 @@ For Software:
 For Software:
 We implemented the project using JavaScript, XML, and CSS, creating different components to showcase the features.
 
+## Installation
+  1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+  npm run dev
+````
+  
 ### Project Documentation
 # Screenshots (Add at least 3)
 
